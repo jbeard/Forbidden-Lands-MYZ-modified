@@ -26,6 +26,22 @@
 		<input type="hidden" name="attr_performance_name"       value="Performance (Empathy)"       />
 		<input type="hidden" name="attr_healing_name"           value="Healing (Empathy)"           />
 		<input type="hidden" name="attr_animal_handling_name"   value="Animal Handling (Empathy)"   />
+		<input type="hidden" name="attr_might_gear_name"             value="Might (Gear)"            />
+		<input type="hidden" name="attr_endurance_gear_name"         value="Endurance (Gear)"        />
+		<input type="hidden" name="attr_melee_gear_name"             value="Melee (Gear)"            />
+		<input type="hidden" name="attr_crafting_gear_name"          value="Crafting (Gear)"         />
+		<input type="hidden" name="attr_stealth_gear_name"           value="Stealth (Gear)"           />
+		<input type="hidden" name="attr_sleight_of_hand_gear_name"   value="Sleight of Hand (Gear)"   />
+		<input type="hidden" name="attr_move_gear_name"              value="Move (Gear)"              />
+		<input type="hidden" name="attr_marksmanship_gear_name"      value="Marksmanship (Gear)"      />
+		<input type="hidden" name="attr_scouting_gear_name"          value="Scouting (Gear)"             />
+		<input type="hidden" name="attr_lore_gear_name"              value="Lore (Gear)"                 />
+		<input type="hidden" name="attr_survival_gear_name"          value="Survival (Gear)"             />
+		<input type="hidden" name="attr_insight_gear_name"           value="Insight (Gear)"           />
+		<input type="hidden" name="attr_manipulation_gear_name"      value="Manipulation (Gear)"      />
+		<input type="hidden" name="attr_performance_gear_name"       value="Performance (Gear)"       />
+		<input type="hidden" name="attr_healing_gear_name"           value="Healing (Gear)"           />
+		<input type="hidden" name="attr_animal_handling_gear_name"   value="Animal Handling (Gear)"   />
 
              Character Type:
             <input type="radio" class="sheet-character-type sheet-character-type-human"  name ="attr_RaceType" text="Player"   value="Human" />                  
@@ -168,13 +184,31 @@
                         </tr>
 						<tr class="sheet-row-dark">
                             <td class="sheet-text-stats">
+                                <span name="attr_skills_specific_name">Skill</span>
+                            </td>
+                            <td align="center">
+                                <span name="attr_skills_rank_name">Rank</span>
+                            </td>
+                            <td align="center">
+                                <span name="attr_skills_rank_name">Gear</span>
+                            </td>
+                            <td align="center">
+                                <span name="attr_skills_roll_name">Roll</span>
+                            </td>
+                        </tr>
+                        </tr>
+						<tr class="sheet-row-dark">
+                            <td class="sheet-text-stats">
                                 <span name="attr_might_name">Might (Strength)</span>
                             </td>
                             <td align="center">
                                 <input class="sheet-value sheet-value-singledigit" name="attr_might" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{might_name}}} {{Base Dice = [[[[@{damage}]]d6>6]]}} {{Skill Dice = [[[[@{might}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_might_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{might_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{might}+0]]d6>6]]}} {{Gear Dice = [[[[@{might_gear}+0]]d6>6]]}}'
                                 name='roll_might'></button>
                             </td>
                         </tr>
@@ -185,8 +219,11 @@
                             <td align="center" width="42px">
                                 <input class="sheet-value sheet-value-singledigit" name="attr_endurance" type="number">
                             </td>
+                            <td align="center" width="42px">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_endurance_gear" type="number">
+                            </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{endurance_name}}} {{Base Dice = [[[[@{damage}]]d6>6]]}} {{Skill Dice = [[[[@{endurance}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <button type='roll' value='&{template:default} {{name=@{endurance_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{endurance}+0]]d6>6]]}} {{Gear Dice = [[[[@{endurance_gear}+0]]d6>6]]}}'
                                 name='roll_endurance'></button>
                             </td>
                         </tr>
@@ -198,7 +235,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_melee" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{melee_name}}} {{Base Dice = [[[[@{damage}]]d6>6]]}} {{Skill Dice = [[[[@{melee}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_melee_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{melee_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{melee}+0]]d6>6]]}} {{Gear Dice = [[[[@{melee_gear}+0]]d6>6]]}}'
                                 name='roll_melee'></button>
                             </td>
                         </tr>
@@ -210,7 +250,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_crafting" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{crafting_name}}} {{Base Dice = [[[[@{damage}]]d6>6]]}} {{Skill Dice = [[[[@{crafting}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_crafting_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{crafting_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{crafting}+0]]d6>6]]}} {{Gear Dice = [[[[@{crafting_gear}+0]]d6>6]]}}'
                                 name='roll_crafting'></button>
                             </td>
                         </tr>
@@ -222,7 +265,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_stealth" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{stealth_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{stealth}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_stealth_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{stealth_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{stealth}+0]]d6>6]]}} {{Gear Dice = [[[[@{stealth_gear}+0]]d6>6]]}}'
                                 name='roll_stealth'></button>
                             </td>
                         </tr>
@@ -234,7 +280,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_sleight_of_hand" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{sleight_of_hand_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{sleight_of_hand}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_sleight_of_hand_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{sleight_of_hand_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{sleight_of_hand}+0]]d6>6]]}} {{Gear Dice = [[[[@{sleight_of_hand_gear}+0]]d6>6]]}}'
                                 name='roll_sleight_of_hand'></button>
                             </td>
                         </tr>
@@ -246,7 +295,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_move" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{move_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{move}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_move_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{move_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{move}+0]]d6>6]]}} {{Gear Dice = [[[[@{move_gear}+0]]d6>6]]}}'
                                 name='roll_move'></button>
                             </td>
                         </tr>
@@ -258,7 +310,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_marksmanship" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{marksmanship_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{marksmanship}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_marksmanship_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{marksmanship_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{marksmanship}+0]]d6>6]]}} {{Gear Dice = [[[[@{marksmanship_gear}+0]]d6>6]]}}'
                                 name='roll_marksmanship'></button>
                             </td>
                         </tr>
@@ -270,7 +325,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_scouting" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{scouting_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{scouting}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_scouting_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{scouting_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{scouting}+0]]d6>6]]}} {{Gear Dice = [[[[@{scouting_gear}+0]]d6>6]]}}'
                                 name='roll_scouting'></button>
                             </td>
                         </tr>
@@ -282,7 +340,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_lore" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{lore_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{lore}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_lore_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{lore_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{lore}+0]]d6>6]]}} {{Gear Dice = [[[[@{lore_gear}+0]]d6>6]]}}'
                                 name='roll_lore'></button>
                             </td>
                         </tr>
@@ -294,7 +355,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_survival" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{survival_name}}} {{Base Dice = [[[[@{confusion}}]]d6>6]]}}  {{Skill Dice = [[[[@{survival}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_survival_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{survival_name}}} {{Base Dice = [[[[@{confusion}}]]d6>6]]}}  {{Skill Dice = [[[[@{survival}+0]]d6>6]]}} {{Gear Dice = [[[[@{survival_gear}+0]]d6>6]]}}'
                                 name='roll_survival'></button>
                             </td>
                         </tr>
@@ -306,7 +370,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_insight" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{insight_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{insight}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_insight_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{insight_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{insight}+0]]d6>6]]}} {{Gear Dice = [[[[@{insight_gear}+0]]d6>6]]}}'
                                 name='roll_insight'></button>
                             </td>
                         </tr>
@@ -318,7 +385,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_manipulation" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{manipulation_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{manipulation}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_manipulation_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{manipulation_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{manipulation}+0]]d6>6]]}} {{Gear Dice = [[[[@{manipulation_gear}+0]]d6>6]]}}'
                                 name='roll_manipulation'></button>
                             </td>
                         </tr>
@@ -330,7 +400,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_performance" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{performance_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{performance}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_performance_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{performance_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{performance}+0]]d6>6]]}} {{Gear Dice = [[[[@{performance_gear}+0]]d6>6]]}}'
                                 name='roll_performance'></button>
                             </td>
                         </tr>
@@ -342,7 +415,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_healing" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{healing_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{healing}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_healing_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{healing_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{healing}+0]]d6>6]]}} {{Gear Dice = [[[[@{healing_gear}+0]]d6>6]]}}'
                                 name='roll_healing'></button>
                             </td>
                         </tr>
@@ -354,7 +430,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_animal_handling" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{animal_handling_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{animal_handling}+0]]d6>6]]}} {{Gear Dice = [[?{Gear Dice|0}d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_animal_handling_gear" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{animal_handling_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{animal_handling}+0]]d6>6]]}} {{Gear Dice = [[[[@{animal_handling_gear}+0]]d6>6]]}}'
                                 name='roll_animal_handling'></button>
                             </td>
                         </tr>
@@ -1385,6 +1464,22 @@
 				setAttrs({performance_name: race_att_names.performance_name});
 				setAttrs({healing_name: race_att_names.healing_name});
 				setAttrs({animal_handling_name: race_att_names.animal_handling_name});
+				setAttrs({might_gear_name: race_att_gear_names.might_gear_name});
+				setAttrs({endurance_gear_name: race_att_gear_names.endurance_gear_name});
+				setAttrs({melee_gear_name: race_att_gear_names.melee_gear_name});
+				setAttrs({crafting_gear_name: race_att_gear_names.crafting_gear_name});
+				setAttrs({stealth_gear_name: race_att_gear_names.stealth_gear_name});
+				setAttrs({sleight_of_hand_gear_name: race_att_gear_names.sleight_of_hand_gear_name});
+				setAttrs({move_gear_name: race_att_gear_names.move_gear_name});
+				setAttrs({marksmanship_gear_name: race_att_gear_names.marksmanship_gear_name});
+				setAttrs({scouting_gear_name: race_att_gear_names.scouting_gear_name});
+				setAttrs({lore_gear_name: race_att_gear_names.lore_gear_name});
+				setAttrs({survival_gear_name: race_att_gear_names.survival_gear_name});
+				setAttrs({insight_gear_name: race_att_gear_names.insight_gear_name});
+				setAttrs({manipulation_gear_name: race_att_gear_names.manipulation_gear_name});
+				setAttrs({performance_gear_name: race_att_gear_names.performance_gear_name});
+				setAttrs({healing_gear_name: race_att_gear_names.healing_gear_name});
+				setAttrs({animal_handling_gear_name: race_att_gear_names.animal_handling_gear_name});
             	});
             });
             //object reference matching core attribute with the associated trauma type
