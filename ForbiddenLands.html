@@ -117,6 +117,20 @@
                             <td align="center" class="sheet-table-noleft"> <input class="sheet-value sheet-value-singledigit" name="attr_doubt_total" type="number" value='0' readonly />
                             </td>
                         </tr>
+                        <tr class="sheet-row-dark">
+                            <td class="sheet-table-noright sheet-text-stats">
+                                <span name="attr_willpower_name">Willpower</span>
+                            </td>
+                            <td align="center" class="sheet-table-noleft">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_willpower" type="number" value='0'>
+                            </td>
+                            <td class="sheet-table-noright sheet-text-stats">
+                                <span name="attr_experience_name">Experience</span>
+                            </td>
+                            <td align="center" class="sheet-table-noleft">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_experience" type="number" value='0'>
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <div class="sheet-singlecell-bottompadding">
@@ -439,134 +453,6 @@
                         </tr>
                     </table>
                     <br/>
-                    <table class="sheet-table-onecolumn">
-                        <tr class="sheet-text-header">
-                            <td class="sheet-text-header" colspan="4" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
-                                ADVANCED ROLL
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats">
-                                
-                            </td>
-                            <td align="center" class="" width="42">
-							    <span class="sheet-text-header-smaller">Total</span>
-                            </td>
-                            <td align="center" class="" width="42">
-                                <span class="sheet-text-header-smaller">Successes</span>
-                            </td>
-                            <td align="center" class="" width="42">
-                                <span class="sheet-text-header-smaller">Fails</span>
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats">
-                                <span >Base</span>
-                                
-                            </td>
-                            <td align="center" class="" width="42">
-							    <input class="sheet-value sheet-value-singledigit" name="attr_advroll_base_start" type="number" value='0'> 
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_base_success" type="number" value='0'>
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_base_fail" type="number" value='0'>
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats">
-                                <span>Skill</span>
-                            </td>
-                            <td align="center" class="" width="42">
-							    <input class="sheet-value sheet-value-singledigit" name="attr_advroll_skill_start" type="number" value='0'> 
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_skill_success" type="number" value='0'>
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_skill_fail" type="number" value='0'>
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats">
-                                <span >Gear</span>
-                            </td>
-                            <td align="center" class="" width="42">
-							    <input class="sheet-value sheet-value-singledigit" name="attr_advroll_gear_start" type="number" value='0'> 
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_gear_success" type="number" value='0'>
-                            </td>
-                            <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats">
-                                <span >Artefact</span>
-                            </td>
-                            <td align="center" class="" width="42">
-							    <input class="sheet-value sheet-value-singledigit" name="attr_advroll_gear_start" type="number" value='0'> 
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_gear_success" type="number" value='0'>
-                            </td>
-                            <td align="center" class="" width="42">
-                                <input class="sheet-value sheet-value-singledigit" name="attr_advroll_gear_fail" type="number" value='0'>
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td class="sheet-table-noright sheet-text-stats" colspan="4">
-                                <button type="roll"  name='roll_melee' class="sheet-right-roll"
-                                        value='&{template:default} {{name=Custom Roll}}  {{ Base Dice= [[[[@{advroll_base_success}+0]]d1cs1cf2>0+ [[@{advroll_base_fail}+0]]d1cs2cf1>6+ [[@{advroll_base_start}-@{advroll_base_success}-@{advroll_base_fail}+0]]d6>6]]}}  {{ Skill Dice= [[[[@{advroll_skill_success}+0]]d1cs1cf2>0+ [[@{advroll_skill_fail}+0]]d1cs2cf1>6+ [[@{advroll_skill_start}-@{advroll_skill_success}-@{advroll_skill_fail}+0]]d6>6]]}} {{ Gear Dice= [[[[@{advroll_gear_success}+0]]d1cs1cf2>0+ [[@{advroll_gear_fail}+0]]d1cs2cf1>6+ [[@{advroll_gear_start}-@{advroll_gear_success}-@{advroll_gear_fail}+0]]d6>6]]}}'
-                                ></button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="sheet-singlecell-bottompadding">
-                    <table class="sheet-table-onecolumn">
-                        <tr class="sheet-text-header">
-                            <td class=" sheet-text-header" colspan="2" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
-                                WILLPOWER POINTS
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td align="center" colspan="2">
-                                <input checked name="attr_rot" type="radio" value="0" title="0"> 
-								<input name="attr_rot" type="radio" value="1" title="1"> 
-								<input name="attr_rot" type="radio" value="2" title="2"> 
-								<input name="attr_rot" type="radio" value="3" title="3"> 
-								<input name="attr_rot" type="radio" value="4" title="4"> 
-								<input name="attr_rot" type="radio" value="5" title="5"> 
-								<input name="attr_rot" type="radio" value="6" title="6"> 
-								<input name="attr_rot" type="radio" value="7" title="7"> 
-								<input name="attr_rot" type="radio" value="8" title="8"> 
-								<input name="attr_rot" type="radio" value="9" title="9"> 
-								<input name="attr_rot" type="radio" value="10" title="10">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="sheet-singlecell">
-                    <table class="sheet-table-onecolumn">
-                        <tr class="sheet-text-header">
-                            <td class=" sheet-text-header" colspan="4" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
-                                EXPERIENCE POINTS
-                            </td>
-                        </tr>
-                        <tr class="sheet-row-dark">
-                            <td align="center">
-                                <input checked name="attr_exp" type="radio" value="0" title="0"> 
-								<input name="attr_exp" type="radio" value="1" title="1"> 
-								<input name="attr_exp" type="radio" value="2" title="2"> 
-								<input name="attr_exp" type="radio" value="3" title="3"> 
-								<input name="attr_exp" type="radio" value="4" title="4"> 
-								<input name="attr_exp" type="radio" value="5" title="5"> 
-								<input name="attr_exp" type="radio" value="6" title="6"> 
-								<input name="attr_exp" type="radio" value="7" title="7"> 
-								<input name="attr_exp" type="radio" value="8" title="8"> 
-								<input name="attr_exp" type="radio" value="9" title="9">
-                            </td>
-                        </tr>
-                    </table>
                 </div>
             </div>
             <div class="sheet-name-role">
@@ -1438,6 +1324,8 @@
 				setAttrs({fatigue_name: race_att_names.fatigue_name});
 				setAttrs({confusion_name: race_att_names.confusion_name});
 				setAttrs({doubt_name: race_att_names.doubt_name});
+			        setAttrs({willpower_name: race_att_names.willpower_name});
+			        setAttrs({experience_name: race_att_names.experience_name});
 				setAttrs({appearance_name: race_att_names.appearance_name});
 				setAttrs({face_name: race_att_names.face_name});
 				setAttrs({body_name: race_att_names.body_name});
