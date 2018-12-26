@@ -113,7 +113,6 @@
                             <td class="sheet-table-noright sheet-text-stats">
                                 <span name="attr_confusion_name">Fear, Confusion, Panic</span></td>
                             <td align="center" class="sheet-table-noleft">
-                                
 								<input class="sheet-value sheet-value-singledigit" name="attr_confusion" type="number" value='0' readonly />
                             </td>
                         </tr>
@@ -127,7 +126,8 @@
                             </td>
                             <td class="sheet-table-noright sheet-text-stats">
                                 <span name="attr_doubt_name">Doubt, Distrust</span></td>
-                            <td align="center" class="sheet-table-noleft"> <input class="sheet-value sheet-value-singledigit" name="attr_doubt" type="number" value='0' readonly />
+                            <td align="center" class="sheet-table-noleft">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_doubt" type="number" value='0' readonly />
                             </td>
                         </tr>
                         <tr class="sheet-row-dark">
@@ -1394,26 +1394,6 @@
         </div>
 
         <script type="text/worker">
-            //object reference for Race specific attribute names
-            
-            //object reference matching core attribute with the associated trauma type
-            var trauma = {
-                strength:"damage_max", 
-                agility:"fatigue_max", 
-                wits:"confusion_max", 
-                empathy:"doubt_max"
-            };   
-            var trauma_calc = {
-                strength:{ stat_name: "strength", harm_value: "damage", harm_total: "damage_total" },
-                agility: { stat_name: "agility", harm_value: "fatigue", harm_total: "fatigue_total" },
-                wits:    { stat_name: "wits", harm_value: "confusion", harm_total: "confusion_total" },
-                empathy: { stat_name: "empathy", harm_value: "doubt", harm_total: "doubt_total" },
-                damage: { stat_name: "strength", harm_value: "damage", harm_total: "damage_total" },
-                fatigue: { stat_name: "agility", harm_value: "fatigue", harm_total: "fatigue_total" },
-                confusion: { stat_name: "wits", harm_value: "confusion", harm_total: "confusion_total" },
-                doubt: { stat_name: "empathy", harm_value: "doubt", harm_total: "doubt_total" }
-                
-            }
             //Update current damage total when strength or max strength changes
             on("change:strength change:strength_max ", function(eventInfo) {
                 getAttrs(["strength", "strength_max"],function(values){
@@ -1446,22 +1426,6 @@
                     });
                 });
             })
-            //Ensure max trauma = core attribute when sheet is loaded
-            on("sheet:opened", function() {			
-                //create array of attributes from trauma reference var
-                var fetchAttrs = _.keys(trauma).concat(_.values(trauma));
-                getAttrs(fetchAttrs, function(attrValues) {
-                    //pull values from attrValues, split in half, and compare for equality
-                    var attrArray = _.values(attrValues)
-                    var splitIndex = attrArray.length / 2;
-                    var i = attrArray.slice(0, splitIndex);
-                    var j = attrArray.slice(splitIndex);
-                    if (!_.isEqual(i,j)) {
-                        //Pass object to settAttrs where: keys = max trauma attr and values = core attr values
-                        var setTraumaHash = _.object(_.values(trauma),i);
-                        setAttrs(setTraumaHash);
-                    };
-                });
-            })
+
         </script>
 
