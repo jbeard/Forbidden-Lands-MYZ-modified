@@ -42,6 +42,10 @@
 		<input type="hidden" name="attr_performance_gear_name"       value="Performance (Gear)"       />
 		<input type="hidden" name="attr_healing_gear_name"           value="Healing (Gear)"           />
 		<input type="hidden" name="attr_animal_handling_gear_name"   value="Animal Handling (Gear)"   />
+		<input type="hidden" name="attr_food_name"   value="Food"   />
+		<input type="hidden" name="attr_water_name"   value="Water"   />
+		<input type="hidden" name="attr_arrows_name"   value="Arrows"   />
+		<input type="hidden" name="attr_torches_name"   value="Torches"   />
 
              Character Type:
             <input type="radio" class="sheet-character-type sheet-character-type-human"  name ="attr_RaceType" text="Player"   value="Human" />                  
@@ -524,7 +528,7 @@
                 <div class="sheet-singlecell">
                     <table class="sheet-table-onecolumn">
                         <tr class="sheet-text-header">
-                            <td class="sheet-text-header" colspan="2" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
+                            <td class="sheet-text-header" colspan="3" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
                                 CONSUMABLES
                             </td>
                         </tr>
@@ -574,6 +578,39 @@
                             <td align="center">
                                 <button type='roll' value='&{template:default} {{name=@{torches_name}}} {{Consumable Dice = [[1d[[@{torches}]]]]}}'
                                 name='roll_torches'></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-singlecell">
+                    <table class="sheet-table-onecolumn">
+                        <tr class="sheet-text-header">
+                            <td class="sheet-text-header" colspan="2" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
+                                COIN
+                            </td>
+                        </tr>
+                         <tr class="sheet-row-light">
+                            <td class="sheet-text-label">
+                                Gold:
+                            </td>
+                            <td align="center" width="49">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_gold" type="number">
+                            </td>
+                        </tr>
+                        <tr class="sheet-row-light">
+                            <td class="sheet-text-label">
+                                Silver:
+                            </td>
+                            <td align="center" width="49">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_silver" type="number">
+                            </td>
+                        </tr>
+                        <tr class="sheet-row-light">
+                            <td class="sheet-text-label">
+                                Copper:
+                            </td>
+                            <td align="center">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_copper" type="number">
                             </td>
                         </tr>
                     </table>
