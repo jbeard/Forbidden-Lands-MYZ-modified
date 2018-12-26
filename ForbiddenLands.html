@@ -208,7 +208,7 @@
                                 <span name="attr_skills_rank_name">Rank</span>
                             </td>
                             <td align="center">
-                                <span name="attr_skills_rank_name">Gear</span>
+                                <span name="attr_skills_gear_name">Gear</span>
                             </td>
                             <td align="center">
                                 <span name="attr_skills_roll_name">Roll</span>
@@ -477,10 +477,10 @@
                     </tr>
                     <tr class="sheet-row-light">
                         <td class="sheet-table-noright sheet-text-stats">
-                            Rank:
+                            Age:
                         </td>
                         <td class="sheet-table-noleft">
-                            <input class="sheet-textinput-role" name="attr_character_rank" type="text">
+                            <input class="sheet-textinput-role" name="attr_character_age" type="text">
                         </td>
 						<td class="sheet-table-noleftright sheet-text-stats">
                               Profession:
@@ -594,7 +594,7 @@
                                 Gold:
                             </td>
                             <td align="center" width="49">
-                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_gold" type="number">
+                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_gold" type="number">
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
@@ -602,7 +602,7 @@
                                 Silver:
                             </td>
                             <td align="center" width="49">
-                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_silver" type="number">
+                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_silver" type="number">
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
@@ -610,7 +610,7 @@
                                 Copper:
                             </td>
                             <td align="center">
-                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_copper" type="number">
+                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_copper" type="number">
                             </td>
                         </tr>
                     </table>
@@ -945,7 +945,52 @@
                             </tr>
                         </table>
                     </fieldset>
+                </div>
+                <div class="sheet-reputations">
                     <table class="sheet-table-twocolumn">
+                        <tr style="background-image:url('https://i.imgur.com/aWuVNOT.jpg');">
+                            <td class="sheet-text-header" colspan="2">
+                                REPUTATIONS
+                            </td>
+                            <td class="sheet-text-header-smaller" width="70">
+                                Rank
+                            </td>
+                        </tr>
+                        <tr class="sheet-row-light">
+                            <td class="sheet-text-label table-noright">
+                                PC:
+                            </td>
+                            <td class="sheet-table-noleft">
+                                <input class="sheet-textinput-pcs" name="attr_pcreputation-1" type="text">
+                            </td>
+                            <td align="center">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_rank-1" type="number">
+                            </td>
+                        </tr>
+                    </table>
+                    <fieldset class="repeating_reputations">
+                        <table class="sheet-table-twocolumn sheet-table-notop">
+                            <tr class="sheet-row-light sheet-table-notop">
+                                <td class="sheet-text-label sheet-table-noright sheet-table-notop">
+                                    PC:
+                                </td>
+                                <td class="sheet-table-noleft sheet-table-notop">
+                                    <input class="sheet-textinput-pcs" name="attr_reputation-repeating" type="text">
+                                </td>
+                                <td align="center" class="sheet-row-dark sheet-table-notop" width="70">
+                                    <input class="sheet-value sheet-value-singledigit" name="attr_rank-repeating" type="number">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </div>
+                <div class="sheet-motivations">
+                    <table class="sheet-table-twocolumn">
+                        <tr style="background-image:url('https://i.imgur.com/aWuVNOT.jpg');">
+                            <td class="sheet-text-header" colspan="2">
+                                MOTIVATIONS
+                            </td>
+                        </tr>
                         <tr class="sheet-row-light" style="border-top:none;">
                             <td class="sheet-text-label table-noright" colspan="1">
                                 Pride:
