@@ -42,6 +42,22 @@
 		<input type="hidden" name="attr_performance_gear_name"       value="Performance (Gear)"       />
 		<input type="hidden" name="attr_healing_gear_name"           value="Healing (Gear)"           />
 		<input type="hidden" name="attr_animal_handling_gear_name"   value="Animal Handling (Gear)"   />
+		<input type="hidden" name="attr_might_mod_name"             value="Might (Mod)"            />
+		<input type="hidden" name="attr_endurance_mod_name"         value="Endurance (Mod)"        />
+		<input type="hidden" name="attr_melee_mod_name"             value="Melee (Mod)"            />
+		<input type="hidden" name="attr_crafting_mod_name"          value="Crafting (Mod)"         />
+		<input type="hidden" name="attr_stealth_mod_name"           value="Stealth (Mod)"           />
+		<input type="hidden" name="attr_sleight_of_hand_mod_name"   value="Sleight of Hand (Mod)"   />
+		<input type="hidden" name="attr_move_mod_name"              value="Move (Mod)"              />
+		<input type="hidden" name="attr_marksmanship_mod_name"      value="Marksmanship (Mod)"      />
+		<input type="hidden" name="attr_scouting_mod_name"          value="Scouting (Mod)"             />
+		<input type="hidden" name="attr_lore_mod_name"              value="Lore (Mod)"                 />
+		<input type="hidden" name="attr_survival_mod_name"          value="Survival (Mod)"             />
+		<input type="hidden" name="attr_insight_mod_name"           value="Insight (Mod)"           />
+		<input type="hidden" name="attr_manipulation_mod_name"      value="Manipulation (Mod)"      />
+		<input type="hidden" name="attr_performance_mod_name"       value="Performance (Mod)"       />
+		<input type="hidden" name="attr_healing_mod_name"           value="Healing (Mod)"           />
+		<input type="hidden" name="attr_animal_handling_mod_name"   value="Animal Handling (Mod)"   />
 		<input type="hidden" name="attr_food_name"   value="Food"   />
 		<input type="hidden" name="attr_water_name"   value="Water"   />
 		<input type="hidden" name="attr_arrows_name"   value="Arrows"   />
@@ -196,7 +212,7 @@
                 <div class="sheet-singlecell-bottompadding">
                     <table class="sheet-table-onecolumn">
                         <tr class="sheet-text-header">
-                            <td class="sheet-text-header" colspan="4" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
+                            <td class="sheet-text-header" colspan="5" style="background-image: url('https://i.imgur.com/aWuVNOT.jpg')">
                                 <span name="attr_skill_name">SKILLS</span>
                             </td>
                         </tr>
@@ -209,6 +225,9 @@
                             </td>
                             <td align="center">
                                 <span name="attr_skills_gear_name">Gear</span>
+                            </td>
+                            <td align="center">
+                                <span name="attr_skills_mod_name">Mod</span>
                             </td>
                             <td align="center">
                                 <span name="attr_skills_roll_name">Roll</span>
@@ -226,7 +245,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_might_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{might_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{might}+0]]d6>6]]}} {{Gear Dice = [[[[@{might_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_might_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{might_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{might}+0]]d6>6]]}} {{Mod Dice = [[[[@{might_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{might_gear}+0]]d6>6]]}}'
                                 name='roll_might'></button>
                             </td>
                         </tr>
@@ -240,8 +262,11 @@
                             <td align="center" width="42px">
                                 <input class="sheet-value sheet-value-singledigit" name="attr_endurance_gear" type="number">
                             </td>
+                            <td align="center" width="42px">
+                                <input class="sheet-value sheet-value-singledigit" name="attr_endurance_mod" type="number">
+                            </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{endurance_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{endurance}+0]]d6>6]]}} {{Gear Dice = [[[[@{endurance_gear}+0]]d6>6]]}}'
+                                <button type='roll' value='&{template:default} {{name=@{endurance_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{endurance}+0]]d6>6]]}} {{Mod Dice = [[[[@{endurance_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{endurance_gear}+0]]d6>6]]}}'
                                 name='roll_endurance'></button>
                             </td>
                         </tr>
@@ -256,7 +281,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_melee_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{melee_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{melee}+0]]d6>6]]}} {{Gear Dice = [[[[@{melee_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_melee_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{melee_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{melee}+0]]d6>6]]}} {{Mod Dice = [[[[@{melee_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{melee_gear}+0]]d6>6]]}}'
                                 name='roll_melee'></button>
                             </td>
                         </tr>
@@ -271,7 +299,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_crafting_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{crafting_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{crafting}+0]]d6>6]]}} {{Gear Dice = [[[[@{crafting_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_crafting_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{crafting_name}}} {{Base Dice = [[[[@{strength}]]d6>6]]}} {{Skill Dice = [[[[@{crafting}+0]]d6>6]]}} {{Mod Dice = [[[[@{crafting_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{crafting_gear}+0]]d6>6]]}}'
                                 name='roll_crafting'></button>
                             </td>
                         </tr>
@@ -286,7 +317,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_stealth_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{stealth_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{stealth}+0]]d6>6]]}} {{Gear Dice = [[[[@{stealth_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_stealth_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{stealth_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{stealth}+0]]d6>6]]}} {{Mod Dice = [[[[@{stealth_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{stealth_gear}+0]]d6>6]]}}'
                                 name='roll_stealth'></button>
                             </td>
                         </tr>
@@ -301,7 +335,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_sleight_of_hand_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{sleight_of_hand_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{sleight_of_hand}+0]]d6>6]]}} {{Gear Dice = [[[[@{sleight_of_hand_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_sleight_of_hand_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{sleight_of_hand_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{sleight_of_hand}+0]]d6>6]]}} {{Mod Dice = [[[[@{sleight_of_hand_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{sleight_of_hand_gear}+0]]d6>6]]}}'
                                 name='roll_sleight_of_hand'></button>
                             </td>
                         </tr>
@@ -316,7 +353,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_move_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{move_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{move}+0]]d6>6]]}} {{Gear Dice = [[[[@{move_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_move_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{move_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{move}+0]]d6>6]]}} {{Mod Dice = [[[[@{move_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{move_gear}+0]]d6>6]]}}'
                                 name='roll_move'></button>
                             </td>
                         </tr>
@@ -331,7 +371,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_marksmanship_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{marksmanship_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{marksmanship}+0]]d6>6]]}} {{Gear Dice = [[[[@{marksmanship_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_marksmanship_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{marksmanship_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{marksmanship}+0]]d6>6]]}} {{Mod Dice = [[[[@{marksmanship_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{marksmanship_gear}+0]]d6>6]]}}'
                                 name='roll_marksmanship'></button>
                             </td>
                         </tr>
@@ -346,7 +389,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_scouting_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{scouting_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{scouting}+0]]d6>6]]}} {{Gear Dice = [[[[@{scouting_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_scouting_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{scouting_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{scouting}+0]]d6>6]]}} {{Mod Dice = [[[[@{scouting_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{scouting_gear}+0]]d6>6]]}}'
                                 name='roll_scouting'></button>
                             </td>
                         </tr>
@@ -361,7 +407,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_lore_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{lore_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{lore}+0]]d6>6]]}} {{Gear Dice = [[[[@{lore_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_lore_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{lore_name}}} {{Base Dice = [[[[@{confusion}]]d6>6]]}} {{Skill Dice = [[[[@{lore}+0]]d6>6]]}} {{Mod Dice = [[[[@{lore_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{lore_gear}+0]]d6>6]]}}'
                                 name='roll_lore'></button>
                             </td>
                         </tr>
@@ -376,7 +425,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_survival_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{survival_name}}} {{Base Dice = [[[[@{confusion}}]]d6>6]]}}  {{Skill Dice = [[[[@{survival}+0]]d6>6]]}} {{Gear Dice = [[[[@{survival_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_survival_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{survival_name}}} {{Base Dice = [[[[@{confusion}}]]d6>6]]}}  {{Skill Dice = [[[[@{survival}+0]]d6>6]]}} {{Mod Dice = [[[[@{survival_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{survival_gear}+0]]d6>6]]}}'
                                 name='roll_survival'></button>
                             </td>
                         </tr>
@@ -391,7 +443,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_insight_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{insight_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{insight}+0]]d6>6]]}} {{Gear Dice = [[[[@{insight_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_insight_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{insight_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{insight}+0]]d6>6]]}} {{Mod Dice = [[[[@{insight_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{insight_gear}+0]]d6>6]]}}'
                                 name='roll_insight'></button>
                             </td>
                         </tr>
@@ -406,7 +461,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_manipulation_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{manipulation_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{manipulation}+0]]d6>6]]}} {{Gear Dice = [[[[@{manipulation_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_manipulation_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{manipulation_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{manipulation}+0]]d6>6]]}} {{Mod Dice = [[[[@{manipulation_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{manipulation_gear}+0]]d6>6]]}}'
                                 name='roll_manipulation'></button>
                             </td>
                         </tr>
@@ -421,7 +479,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_performance_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{performance_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{performance}+0]]d6>6]]}} {{Gear Dice = [[[[@{performance_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_performance_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{performance_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{performance}+0]]d6>6]]}} {{Mod Dice = [[[[@{performance_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{performance_gear}+0]]d6>6]]}}'
                                 name='roll_performance'></button>
                             </td>
                         </tr>
@@ -436,7 +497,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_healing_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{healing_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{healing}+0]]d6>6]]}} {{Gear Dice = [[[[@{healing_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_healing_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{healing_name}}} {{Base Dice = [[[[@{doubt}}]]d6>6]]}} {{Skill Dice = [[[[@{healing}+0]]d6>6]]}} {{Mod Dice = [[[[@{healing_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{healing_gear}+0]]d6>6]]}}'
                                 name='roll_healing'></button>
                             </td>
                         </tr>
@@ -451,7 +515,10 @@
                                 <input class="sheet-value sheet-value-singledigit" name="attr_animal_handling_gear" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{animal_handling_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{animal_handling}+0]]d6>6]]}} {{Gear Dice = [[[[@{animal_handling_gear}+0]]d6>6]]}}'
+                                <input class="sheet-value sheet-value-singledigit" name="attr_animal_handling_mod" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{animal_handling_name}}} {{Base Dice = [[[[@{fatigue}]]d6>6]]}} {{Skill Dice = [[[[@{animal_handling}+0]]d6>6]]}} {{Mod Dice = [[[[@{animal_handling_mod}+0]]d6>6]]}} {{Gear Dice = [[[[@{animal_handling_gear}+0]]d6>6]]}}'
                                 name='roll_animal_handling'></button>
                             </td>
                         </tr>
@@ -582,6 +649,7 @@
                         </tr>
                     </table>
                 </div>
+		<br/>
                 <div class="sheet-singlecell">
                     <table class="sheet-table-onecolumn">
                         <tr class="sheet-text-header">
