@@ -468,7 +468,7 @@
                             Kin:
                         </td>
                         <td class="sheet-table-noleft">
-                            <input class="sheet-textinput-role" name="attr_character-kin" type="text">
+                            <input class="sheet-textinput-role" name="attr_character_kin" type="text">
                         </td>
                     </tr>
                     <tr class="sheet-row-light">
@@ -476,13 +476,13 @@
                             Rank:
                         </td>
                         <td class="sheet-table-noleft">
-                            <input class="sheet-textinput-role" name="attr_character-kin" type="text">
+                            <input class="sheet-textinput-role" name="attr_character_rank" type="text">
                         </td>
 						<td class="sheet-table-noleftright sheet-text-stats">
                               Profession:
                         </td>
                         <td class="sheet-table-noleft">
-                            <input class="sheet-textinput-role" name="attr_character-profession" type="text">
+                            <input class="sheet-textinput-role" name="attr_character_profession" type="text">
                         </td>
                         
                     </tr>
@@ -533,7 +533,11 @@
                                 Food:
                             </td>
                             <td align="center" width="49">
-                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_bullets" type="number">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_food" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{food_name}}} {{Consumable Dice = [[1d[[@{food}]]]]}}'
+                                name='roll_food'></button>
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
@@ -541,7 +545,11 @@
                                 Water:
                             </td>
                             <td align="center" width="49">
-                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_bullets" type="number">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_water" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{water_name}}} {{Consumable Dice = [[1d[[@{water}]]]]}}'
+                                name='roll_water'></button>
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
@@ -549,7 +557,11 @@
                                 Arrows:
                             </td>
                             <td align="center">
-                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_grub" type="number">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_arrows" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{arrows_name}}} {{Consumable Dice = [[1d[[@{arrows}]]]]}}'
+                                name='roll_arrows'></button>
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
@@ -557,7 +569,11 @@
                                 Torches:
                             </td>
                             <td align="center">
-                                <input class="sheet-value-brighter sheet-value-doubledigit" name="attr_water" type="number">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_torches" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{torches_name}}} {{Consumable Dice = [[1d[[@{torches}]]]]}}'
+                                name='roll_torches'></button>
                             </td>
                         </tr>
                     </table>
