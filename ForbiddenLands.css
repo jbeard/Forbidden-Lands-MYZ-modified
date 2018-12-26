@@ -1,11 +1,11 @@
 /* -------------------------------------
-Sheet Tabs 
+Sheet Tabs
 (Shamelessly stolen from the EOTE sheet)
 (Seriously, saved my bacon <3<3<3)
 ------------------------------------- */
 
-div.sheet-tab-content { 
-   display: none; 
+div.sheet-tab-content {
+   display: none;
    border-top:1px solid #ffffff;
    margin-top:2px;
 }
@@ -16,7 +16,7 @@ input.sheet-textinput-skills.sheet-skill-input {
 
 input.sheet-tab-character-sheet:checked ~ div.sheet-tab-character-sheet,
 input.sheet-tab-ark-sheet:checked ~ div.sheet-tab-ark-sheet,
-{                                 
+{
    display: block;
 }
 
@@ -67,13 +67,13 @@ input.sheet-tab:checked:hover::before {
 }
 
 /* -----
-Inputs 
+Inputs
 ----- */
 
 /* General */
 
-input[type='radio']{ 
-   margin: 6px;  
+input[type='radio']{
+   margin: 6px;
 }
 
 input[type='text']{
@@ -98,7 +98,7 @@ select {
    background-color:#f6eadc;
    margin:0;
    padding:0;
-   
+
 }
 
 /* Type Number */
@@ -186,13 +186,21 @@ select {
    width: 195px;
 }
 
+.sheet-textinput-relationship-name {
+   width: 115px;
+}
+
+.sheet-textinput-relationship-desc {
+   width: 353px;
+}
+
 /* Text Area */
 
 .sheet-text-apperance {
    background-color:#f6eadc;
    margin-left: 5px;
    margin-bottom: 5px;
-   margin-top: 5px; 
+   margin-top: 5px;
    width: 269px;
    height:46px;
 }
@@ -201,7 +209,7 @@ select {
    background-color:#ECD3B6;
    margin-left: 5px;
    margin-bottom: 5px;
-   margin-top: 5px; 
+   margin-top: 5px;
    width: 269px;
    height:40px;
 }
@@ -210,7 +218,7 @@ select {
    background-color:#f6eadc;
    margin-left: 5px;
    margin-bottom: 5px;
-   margin-top: 5px; 
+   margin-top: 5px;
    width: 589px;
    height:90px;
 }
@@ -259,7 +267,7 @@ color: white;
 Meta Windows
 --------- */
 .sheet-character-wrapper{
-     width:940px; 
+     width:940px;
 }
 
 .sheet-meta1 {
@@ -270,32 +278,32 @@ Meta Windows
 .sheet-meta2 {
      float:left;
      padding-bottom:20px;
-     padding-right:20px; 
+     padding-right:20px;
 }
 
 .sheet-meta3 {
-     float:left; 
-     padding-bottom:20px;     
+     float:left;
+     padding-bottom:20px;
 }
 
 .sheet-meta4 {
-     float:left;      
+     float:left;
 }
 
 .sheet-meta5 {
      float:left;
-     padding-bottom:20px;      
+     padding-bottom:20px;
 }
 
 .sheet-meta6 {
-     float:left;      
+     float:left;
 }
 
 /* ------
 Both Tabs
 ------ */
 
-.sheet-logo { 
+.sheet-logo {
    width:950px;
 }
 
@@ -309,19 +317,19 @@ Character Sheet
 }
 
 .sheet-singlecell-bottompadding {
-   width: 300px;  
-   padding-bottom:20px; 
+   width: 300px;
+   padding-bottom:20px;
 }
 
 .sheet-twocell-bottompadding {
-   width: 620px; 
+   width: 620px;
    padding-bottom:20px;
 }
 
 .sheet-name-role {
    width: 620px;
-   float: left; 
-   padding-bottom:20px;        
+   float: left;
+   padding-bottom:20px;
 }
 
 .sheet-relationships {
@@ -333,11 +341,11 @@ Character Sheet
 }
 
 /* ------
-Ark Sheet 
+Ark Sheet
 ------ */
 
 .sheet-theark {
-   width: 620px; 
+   width: 620px;
    padding-right: 20px;
    float:left;
 }
@@ -365,7 +373,7 @@ Ark Sheet
 }
 
 /* -------
-Row Colors 
+Row Colors
 ------- */
 
 .sheet-row-dark {
@@ -376,8 +384,8 @@ Row Colors
    background-color:#ECD3B6;
 }
 
-/* --------- 
-Table Styles 
+/* ---------
+Table Styles
 --------- */
 
 table {
