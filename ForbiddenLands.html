@@ -60,7 +60,8 @@
 		<input type="hidden" name="attr_animal_handling_mod_name"   value="Animal Handling (Mod)"       />
 		<input type="hidden" name="attr_food_name"                  value="Food"                        />
 		<input type="hidden" name="attr_water_name"                 value="Water"                       />
-		<input type="hidden" name="attr_arrows_name"                value="Arrows"                      />
+		<input type="hidden" name="attr_arrows_wooden_name"         value="Arrows (Wooden)"             />
+		<input type="hidden" name="attr_arrows_iron_name"           value="Arrows (Iron)"               />
 		<input type="hidden" name="attr_torches_name"               value="Torches"                     />
 
             <div class="sheet-meta1" name="attr_RaceType">
@@ -620,14 +621,26 @@
                         </tr>
                         <tr class="sheet-row-light">
                             <td class="sheet-text-label">
-                                Arrows:
+                                Arrows (Wooden):
                             </td>
                             <td align="center">
-                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_arrows" type="number">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_arrows_wooden" type="number">
                             </td>
                             <td align="center">
-                                <button type='roll' value='&{template:default} {{name=@{arrows_name}}} {{Consumable Dice = [[1d[[@{arrows}]]]]}}'
-                                name='roll_arrows'></button>
+                                <button type='roll' value='&{template:default} {{name=@{arrows_wooden_name}}} {{Consumable Dice = [[1d[[@{arrows_wooden}]]]]}}'
+                                name='roll_arrows_wooden'></button>
+                            </td>
+                        </tr>
+                        <tr class="sheet-row-light">
+                            <td class="sheet-text-label">
+                                Arrows (Iron):
+                            </td>
+                            <td align="center">
+                                d<input class="sheet-value-brighter sheet-value-doubledigit" name="attr_arrows_iron" type="number">
+                            </td>
+                            <td align="center">
+                                <button type='roll' value='&{template:default} {{name=@{arrows_iron_name}}} {{Consumable Dice = [[1d[[@{arrows_iron}]]]]}}'
+                                name='roll_arrows_iron'></button>
                             </td>
                         </tr>
                         <tr class="sheet-row-light">
